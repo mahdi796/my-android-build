@@ -1,3 +1,4 @@
+
 name: Android Build
 
 on:
@@ -6,7 +7,7 @@ on:
       - main
 
 env:
-  ANDROID_HOME: ${{ runner.tool_cache }}/android-sdk
+  ANDROID_HOME: ${{ github.workspace }}/android-sdk
 
 jobs:
   build:
@@ -46,4 +47,3 @@ jobs:
       with:
         name: debug-apk
         path: app/build/outputs/apk/debug/app-debug.apk
-
